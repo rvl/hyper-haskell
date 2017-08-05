@@ -90,6 +90,21 @@ Installation from the binary distribution follows the structure explained above.
 That's it! Happy hyper!
 
   [diagrams]: https://github.com/diagrams
+  [csound]: https://github.com/spell-music/csound-expression
+
+## Installation with Nixpkgs
+
+To install the graphical front-end and back-end server (configured by
+default with [Diagrams][] and [Csound][]) on NixOS/nixpkgs:
+
+    nix-env -f '<nixpkgs>' -iA hyper-haskell
+    hyper-haskell ~/.nix-profile/share/hyper-haskell/worksheets/Diagrams.hhs
+
+Make sure to set the "Interpreter Back-end" in the "Settings" section
+of the worksheet to `nix`.
+
+For how to customise the set of packages available to the backend
+server, see [hyper-haskell-example.nix](haskell/hyper-haskell-example.nix).
 
 ## Run from source
 
